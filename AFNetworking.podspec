@@ -53,4 +53,11 @@ Pod::Spec.new do |s|
 
     ss.source_files = 'UIKit+AFNetworking'
   end
+ # Add this line to ensure privacy manifest is included
+  s.resource_bundles = {
+    'AFNetworking' => ['AFNetworking/PrivacyInfo.xcprivacy']
+  }
+  
+  # Or alternatively, if resource_bundles doesn't work:
+  s.resources = 'AFNetworking/PrivacyInfo.xcprivacy'
 end
